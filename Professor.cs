@@ -4,12 +4,11 @@ namespace AM_A1
 {
     public class Professor : Employee
     {
-        public Professor()
-        {
-        }
 
+        public Professor() { }
+        
 
-    public Professor(string name, Address residence, string email, int salary, DateTime hireDate,double hours,Enum rank) :base (salary, hireDate)
+    public Professor(string name, Address residence, string email, int salary, DateTime hireDate,double hours,Enum rank) : base (salary, hireDate)
         {
             this.Name = name;
             this.Residence = residence;
@@ -19,9 +18,7 @@ namespace AM_A1
             this.Hours = hours;
             this.Rank = rank;
           
-
         }
-
         public enum rank
         {
             Associate,
