@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace AM_A1
 {
@@ -31,18 +32,36 @@ namespace AM_A1
 
 
 
-            Console.WriteLine("Welcome, please choose a command:\n" +
-                "Press 1 to modify Student\n" +
-                "Press 2 to modify Staff\n" +
-                "Press 3 to modify Professor\n" +
-                "Press 0 to exit"
-                );
+            Console.WriteLine("Welcome, please choose a command:\n"+
+                              "Press 1 to modify Student\n"+
+                              "Press 2 to modify Staff\n"+
+                              "Press 3 to modify Professor\n"+
+                              "Press 0 to exit");
+            //  Staff.showAll(staffList);
+
+ var Per = from Show in staffList select Show;
+            Per.ToArray();
+            Console.WriteLine(s);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             string choice = null; 
 
             while (choice != "0" )
             {
-choice =Console.ReadLine();
+              choice =Console.ReadLine();
                 switch (choice)
                 {
                     case "0":
@@ -50,7 +69,9 @@ choice =Console.ReadLine();
                         break;
 
                     case "1":
-                        Console.WriteLine("nonp");
+                        Staff.showAll(staffList);
+                           ;
+                       
                         break;
 
                     case "2":
@@ -60,18 +81,10 @@ choice =Console.ReadLine();
                         break;
 
                 }
-
             }
 
 
-
-            Console.WriteLine("Student Menu\n" +
-                "Press 1 to list aa students\n" +
-                "Press 2 to add a new student\n" +
-                "Press 3 to update an existing student\n" +
-                "Press 5 to return to main menu"
-                );
-
+           
 
 
 

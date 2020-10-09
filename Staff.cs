@@ -1,5 +1,8 @@
 ﻿
 using System;
+using System.Collections.Generic;
+using System.Linq;
+
 namespace AM_A1
 {
     public class Staff : Employee
@@ -31,6 +34,27 @@ namespace AM_A1
         }
 
         public Enum Designation { get; set; }
+
+
+
+        public static String showAll(List<Staff> Showlist) {
+
+            var Per = from Show in Showlist select Show;
+            Per.ToArray();
+            return Per.ToString();
+        
+        }
+
+
+
+
+
+
+
+
+
+
+
 
         public override string ToString()
         {

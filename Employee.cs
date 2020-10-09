@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace AM_A1
 {
@@ -25,12 +27,41 @@ namespace AM_A1
                 this.HireDate = hireDate;
             }
             else Console.WriteLine("Salaray must be between 2k and 8k");
-
         }
 
         
-        public float Salary { get; set; }
-        public DateTime HireDate { get; set; }
+        public  float Salary { get; set; }
+        public  DateTime HireDate { get; set; }
+
+
+/*
+        public static String showAll(List<Employee> Showlist) {
+
+            var Per = from Show in Showlist select Show;
+            Per.ToArray();
+            return Per.ToString();
+        
+        }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         public override string ToString()
         {

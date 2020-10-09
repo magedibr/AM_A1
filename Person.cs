@@ -23,6 +23,28 @@ namespace AM_A1
             return $"Class: Person | Name = {Name}| Residence = {Residence}| Email ={Email} ";
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
 
