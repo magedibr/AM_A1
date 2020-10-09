@@ -38,26 +38,30 @@ namespace AM_A1
                 "Press 0 to exit"
                 );
 
-                string  choice = Console.ReadLine();
-          
-            switch (choice)
+            string choice = null; 
+
+            while (choice != "0" )
             {
-                case "0":
-                    Console.WriteLine("Exited Programm");
-                    break;
-                
-                case "1": Console.WriteLine("nonp");
-                    break;
+choice =Console.ReadLine();
+                switch (choice)
+                {
+                    case "0":
+                        Console.WriteLine("Exited Programm");
+                        break;
 
-                case "2":
-                    break;
+                    case "1":
+                        Console.WriteLine("nonp");
+                        break;
 
-                case "3":
-                    break;
+                    case "2":
+                        break;
+
+                    case "3":
+                        break;
+
+                }
 
             }
-
-
 
 
 
