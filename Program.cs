@@ -42,7 +42,7 @@ namespace AM_A1
                               "Press 0 to exit");
 
             //   Student.showAll<Student>(studList);
-            Modify.Add(studList, new Student("AAABBB", new Address("heh", "heh", "heh"), "asasd"));
+         //   Modify.Add(studList, new Student("AAABBB", new Address("heh", "heh", "heh"), "asasd"));
             Console.WriteLine("Please pick which student you would like to delete(pick what number they are in the list)");
 
             Modify.showAll<Student>(studList);
@@ -54,6 +54,7 @@ namespace AM_A1
             string email = Console.ReadLine();
 
             Student.Update(name, email, studList);
+            Modify.showAll<Student>(studList);
 
 
 
