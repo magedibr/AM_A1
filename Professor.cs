@@ -60,22 +60,18 @@ namespace AM_A1
             string stringHours = Console.ReadLine();
             int newHours = Convert.ToInt32(stringHours);
 
+           
+
+            Console.WriteLine("Enter number to chose rank\n 0 = Associate \n 1 = Professor \n 2 for Assistant Professor:");
+
             Console.WriteLine("Rank");
             string rankk = Console.ReadLine();
-          int tr=  Convert.ToInt32(rankk);
-                                   
-            Console.WriteLine("Enter number to chose rank\n 0 = Associate \n 1 = Professor \n " )
+            int tr=  Convert.ToInt32(rankk);
 
 
-
-                 Associate = 0,
-            Proffessor = 1,
-            Assis_Prof = 2,
-
-
-
-
-
+            Console.WriteLine("Salary");
+            string sall = Console.ReadLine();
+            Double newSal = Convert.ToDouble(sall);
 
 
 
@@ -93,6 +89,7 @@ namespace AM_A1
                 prof.Name = newName;
                 prof.HireDate = UpdatedDate.Date;
                 prof.Rank = (rank)tr;
+                prof
 
                 
 
