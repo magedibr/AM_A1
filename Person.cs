@@ -22,7 +22,7 @@ namespace AM_A1
         public override string ToString()
         {
             base.ToString();
-            return $"Name = {Name}| Residence = {Residence}| Email ={Email}";
+            return $"LName = {Name}| Residence = {Residence}| Email ={Email}";
         }
 
 
@@ -37,7 +37,11 @@ namespace AM_A1
 
         }
 
-     
+        public static void
+           Add<T>(List<T> GenList,T inp)
+        {
+            GenList.Add(inp);
+                   }
 
 
 

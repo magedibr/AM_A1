@@ -41,7 +41,9 @@ namespace AM_A1
                               "Press 3 to modify Professor\n" +
                               "Press 0 to exit");
 
-          Staff.showAll<Student>(studList);
+       //   Student.showAll<Student>(studList);
+            Student.Add(studList,new Student("AAABBB", new Address("heh", "heh", "heh"), "asasd"));
+            Student.showAll<Student>(studList);
 
           //  Staff L = new Staff("St1", new Address("B1", "B12", "BCt1"), "staf1@eg.com", 3000, new DateTime(2018, 10, 08), Staff.designation.Clerk);
 
