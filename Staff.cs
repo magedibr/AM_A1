@@ -12,7 +12,7 @@ namespace AM_A1
         }
 
 
-        public Staff(string name, Address residence, string email, float salary, DateTime hireDate, Enum designation) : base(salary, hireDate)
+        public Staff(string name, Address residence, string email, double salary, DateTime hireDate, Enum designation) : base(salary, hireDate)
         {
 
 
@@ -88,7 +88,7 @@ namespace AM_A1
                 staff.HireDate = UpdatedDate.Date;
                 staff.Designation = (designation)tr;
                 staff.Salary = newSal;
-                staff.hours
+                
 
             }
 
@@ -157,20 +157,21 @@ namespace AM_A1
                         Console.WriteLine("Enter number to chose Designation\n 0 = Clerk \n 1 =Office_Assistance\n 2= Secretary \n 3= Maintainance");
 
                         Console.WriteLine("Rank");
-                        string rankk = Console.ReadLine();
-                        int tr = Convert.ToInt32(rankk);
+                        string DesigS = Console.ReadLine();
+                        int tr = Convert.ToInt32(DesigS);
+
 
 
                         Console.WriteLine("Salary");
                         string sall = Console.ReadLine();
                         Double newSal = Convert.ToDouble(sall);
 
+                        designation Deisg = (designation)tr;
 
 
-
-                        Add<Staff>(stfLi,new Staff(Name,new Address(Address1,Address2,City) );
+                        Add<Staff>(stfLi, new Staff(Name, new Address(Address1, Address2, City), newEmail, newSal, UpdatedDate, Deisg));
                         Console.WriteLine("New List\n");
-                        showAll<Student>(stfLi);
+                        showAll<Staff>(stfLi);
 
                         break;
 
@@ -184,24 +185,23 @@ namespace AM_A1
                         Console.WriteLine("Email:");
                         string findEmail = Console.ReadLine();
 
-                        UpdateSt(findName, findEmail, stLi);
-
+                        UpdateStaff(findName, findEmail, stfLi);
                         Console.WriteLine("New List");
-                        showAll<Student>(stLi);
+                        showAll<Staff>(stfLi);
 
                         break;
 
 
                     case "4":
-                        showAll<Student>(stLi);
+                        showAll<Staff>(stfLi);
                         Console.WriteLine("Please enter the number that corrosponds to the students position on the list:(Ascending)\n");
                         string delChoice = Console.ReadLine();
                         Convert.ToInt16(delChoice);
-                        Modify.Del<Student>(stLi, Int32.Parse(delChoice));
+                        Modify.Del<Staff>(stfLi, Int32.Parse(delChoice));
 
 
                         Console.WriteLine("New List");
-                        showAll<Student>(stLi);
+                        showAll<Staff>(stfLi);
 
 
                         break;

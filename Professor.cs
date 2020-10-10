@@ -86,6 +86,7 @@ namespace AM_A1
                 prof.HireDate = UpdatedDate.Date;
                 prof.Rank = (rank)tr;
                 prof.Salary = newSal;
+                prof.Hours = newHours;
 
             }
 
