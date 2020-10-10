@@ -73,10 +73,6 @@ namespace AM_A1
             string sall = Console.ReadLine();
             Double newSal = Convert.ToDouble(sall);
 
-
-
-
-
             Plist.ToList();
 
             foreach (Professor prof in Plist)
@@ -89,13 +85,7 @@ namespace AM_A1
                 prof.Name = newName;
                 prof.HireDate = UpdatedDate.Date;
                 prof.Rank = (rank)tr;
-                prof
-
-                
-
-
-
-
+                prof.Salary = newSal;
 
             }
 

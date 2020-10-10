@@ -16,7 +16,7 @@ namespace AM_A1
             this.HireDate = hireDate;
         }
 
-        public Employee(string name, Address residence, string email, int salary, DateTime hireDate) : base(name, residence, email)
+        public Employee(string name, Address residence, string email, Double salary, DateTime hireDate) : base(name, residence, email)
         {
             if (salary > 2000 && salary < 8000)
             {
@@ -30,7 +30,7 @@ namespace AM_A1
         }
 
         
-        public  float Salary { get; set; }
+        public  Double Salary { get; set; }
         public  DateTime HireDate { get; set; }
 
 
