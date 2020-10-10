@@ -41,9 +41,6 @@ namespace AM_A1
             var stu = from s in list
                       where s.Name == name && s.Email == email
                       select s;
-
-                
-
             Console.WriteLine("Please enter in new details in the following order: Name,Residence and email.\n");
             Console.WriteLine("Name:");
             string newName = Console.ReadLine();

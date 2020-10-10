@@ -24,7 +24,7 @@ namespace AM_A1
                 this.Residence = residence;
                 this.Email = email;
                 this.Salary = salary;
-                this.HireDate = hireDate;
+                this.HireDate = hireDate.Date;
             }
             else Console.WriteLine("Salaray must be between 2k and 8k");
         }
