@@ -45,12 +45,28 @@ namespace AM_A1
                     case "1":
                         showAll<Student>(sts);
                             break;
+                   
+                    case "2":
+                        Console.WriteLine("Please enter in new details in the following order: Name,Residence and email.\n");
+                        Console.WriteLine("Name:");
+                        string newName = Console.ReadLine();
+                        Console.WriteLine("Address one,two and City");
+                        string Address1 = Console.ReadLine();
+                        string Address2 = Console.ReadLine();
+                        string City = Console.ReadLine();
+                        Console.WriteLine("Email:");
+                        string newEmail = Console.ReadLine();
+                        Add<Student>(sts,new Student(newName,new Address(Address1,Address2,City),newEmail));
+                        Console.WriteLine("New List\n");
+                        showAll<Student>(sts);
+                        break;
                 }
 
 
 
 
 
+ Console.WriteLine("Please enter a number that corsponds to Students position on the list:");
 
 
 
