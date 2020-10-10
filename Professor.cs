@@ -24,9 +24,9 @@ namespace AM_A1
         }
         public enum rank
         {
-            Associate,
-            Proffessor,
-            Assis_Prof,
+            Associate=0,
+            Proffessor=1,
+            Assis_Prof=2,
         }
 
 
@@ -61,8 +61,27 @@ namespace AM_A1
             int newHours = Convert.ToInt32(stringHours);
 
             Console.WriteLine("Rank");
-            string rank = Console.ReadLine();
-                           Plist.ToList();
+            string rankk = Console.ReadLine();
+          int tr=  Convert.ToInt32(rankk);
+                                   
+            Console.WriteLine("Enter number to chose rank\n 0 = Associate \n 1 = Professor \n " )
+
+
+
+                 Associate = 0,
+            Proffessor = 1,
+            Assis_Prof = 2,
+
+
+
+
+
+
+
+
+
+
+            Plist.ToList();
 
             foreach (Professor prof in Plist)
             {
@@ -73,7 +92,14 @@ namespace AM_A1
                 prof.Residence.City = City;
                 prof.Name = newName;
                 prof.HireDate = UpdatedDate.Date;
-                prof.Rank = prof.Rank.Equals(;
+                prof.Rank = (rank)tr;
+
+                
+
+
+
+
+
             }
 
 
