@@ -30,11 +30,9 @@ namespace AM_A1
             showAll<T>(List<T> GenList)
         {
             var Per = from Show in GenList select Show;
-
             Per.ToList();
             foreach (T s in Per)
                 Console.WriteLine(s);
-
         }
 
         public static void

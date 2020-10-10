@@ -42,27 +42,10 @@ namespace AM_A1
                               "Press 0 to exit");
 
        //   Student.showAll<Student>(studList);
-            Student.Add(studList,new Student("AAABBB", new Address("heh", "heh", "heh"), "asasd"));
-            Student.showAll<Student>(studList);
+            Modify.Add(studList,new Student("AAABBB", new Address("heh", "heh", "heh"), "asasd"));
+            Modify.showAll<Student>(studList);
 
-          //  Staff L = new Staff("St1", new Address("B1", "B12", "BCt1"), "staf1@eg.com", 3000, new DateTime(2018, 10, 08), Staff.designation.Clerk);
-
-
-
-         //   Console.WriteLine(L);
-            
-            
-            
-           /* 
-           
-            var Per = from Show in staffList select Show;
-
-            Per.ToList();
-            foreach (Staff s in Per)
-                Console.WriteLine(s);
-        
-        */
-       
+                
         
         } 
     } 
