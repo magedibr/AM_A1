@@ -41,13 +41,40 @@ namespace AM_A1
                       where s.Name == name && s.Email == email
                       select s;
                        
-            stu.ToList();
+
+
+            Student newStu = new Student();
 
 
 
-            foreach (Student s in stu )
-                Console.WriteLine(s);
+
+            stu.ToArray();
+            foreach (Student s in stu) { 
+                Console.WriteLine(s);     
+               
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
