@@ -17,7 +17,7 @@
   <Class Name="AM_A1.Person">
     <Position X="5.75" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAEAAAAAAQAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <HashCode>AAIAAAAAgCAAAAAEAAAAAAQAAAAAAAAAAAAAAAAgAAA=</HashCode>
       <FileName>Person.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -34,7 +34,7 @@
       </Enum>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAABAEAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Professor.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -51,14 +51,14 @@
       </Enum>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAgAgAAAAAAAAAAA=</HashCode>
       <FileName>Staff.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AM_A1.Student">
     <Position X="9.25" Y="1" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Student.cs</FileName>
     </TypeIdentifier>
   </Class>

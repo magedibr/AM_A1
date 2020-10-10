@@ -41,29 +41,53 @@ namespace AM_A1
                               "Press 3 to modify Professor\n" +
                               "Press 0 to exit");
 
-            //   Student.showAll<Student>(studList);
-         //   Modify.Add(studList, new Student("AAABBB", new Address("heh", "heh", "heh"), "asasd"));
-            Console.WriteLine("Please pick which student you would like to delete(pick what number they are in the list)");
+            string modifyChoice = Console.ReadLine();
 
-            Modify.showAll<Student>(studList);
-            //Console.WriteLine("Number:");
-            // string num = Console.ReadLine();
-            //   Modify.Del<Student>(studList, int.Parse(num));
-            //  Modify.showAll<Student>(studList);
-            string name = Console.ReadLine();
-            string email = Console.ReadLine();
+            while (modifyChoice != "0")
+            {
 
-            Student.Update(name, email, studList);
-            Modify.showAll<Student>(studList);
+                switch (modifyChoice)
+                {
+                    case "1":
+                        
+
+
+                        break;
 
 
 
+
+
+
+                }
+
+
+
+
+
+                //   Student.showAll<Student>(studList);
+                //   Modify.Add(studList, new Student("AAABBB", new Address("heh", "heh", "heh"), "asasd"));
+                Console.WriteLine("Please pick which student you would like to delete(pick what number they are in the list)");
+
+                Modify.showAll<Student>(studList);
+                //Console.WriteLine("Number:");
+                // string num = Console.ReadLine();
+                //   Modify.Del<Student>(studList, int.Parse(num));
+                //  Modify.showAll<Student>(studList);
+                string name = Console.ReadLine();
+                string email = Console.ReadLine();
+
+                Student.Update(name, email, studList);
+                Modify.showAll<Student>(studList);
+
+
+
+            }
         }
+
+
+
     }
-
-
-
-}
 /*
             while (choice != "0" )
             {
