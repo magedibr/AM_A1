@@ -9,7 +9,7 @@ namespace AM_A1
         {
         }
 
-        public Person(string name, Address residence, string email){
+        public Person(string name, Address residence, string email) {
             this.Name = name;
             this.Residence = residence;
             this.Email = email;
@@ -36,15 +36,16 @@ namespace AM_A1
         }
 
         public static void
-           Add<T>(List<T> GenList,T inp)
+           Add<T>(List<T> GenList, T inp)
         {
             GenList.Add(inp);
-                   }
+
+            Console.WriteLine("Updated List:");
+            showAll<T>(GenList);
+        }
 
 
-
-
-
+    
 
 
 
