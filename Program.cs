@@ -50,8 +50,9 @@ namespace AM_A1
                 {
                     case "1":Student.StuFunc(studList);
                       break;
-                    case "2":
+                    case "2":Staff.StaFunc(staffList);
                         break;
+                    case "3":
 
 
 

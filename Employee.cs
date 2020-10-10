@@ -10,7 +10,7 @@ namespace AM_A1
         {
         }
 
-        public Employee(float salary, DateTime hireDate)
+        public Employee(double salary, DateTime hireDate)
         {
             Salary = salary;
             this.HireDate = hireDate;

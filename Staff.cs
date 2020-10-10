@@ -150,10 +150,7 @@ namespace AM_A1
                         string newDate = Console.ReadLine();
                         DateTime UpdatedDate = Convert.ToDateTime(newDate);
 
-                        Console.WriteLine("Hours:");
-                        string stringHours = Console.ReadLine();
-                        int newHours = Convert.ToInt32(stringHours);
-
+                      
                         Console.WriteLine("Enter number to chose Designation\n 0 = Clerk \n 1 =Office_Assistance\n 2= Secretary \n 3= Maintainance");
 
                         Console.WriteLine("Rank");

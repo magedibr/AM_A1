@@ -94,9 +94,125 @@ namespace AM_A1
 
 
         }
-    
-    
-    
+
+
+        public void ProfFunc(List<Professor> prList) {
+
+
+                        {
+                Console.WriteLine("Professor Menu\n" +
+                    "Press 1 to list all Professors\n" +
+                    "Press 2 to add a new Professors\n" +
+                    "Press 3 to update an existing Professors\n" +
+                    "Press 4 to delete a Professor\n" +
+                    "Press 5 to return to main menu"
+                   );
+
+                string StuChoice = null;
+
+
+                while (StuChoice != "5")
+                {
+                    StuChoice = Console.ReadLine();
+
+                    switch (StuChoice)
+                    {
+                        case "1":
+                            showAll<Professor>(prList);
+                            break;
+
+                        case "2":
+                            Console.WriteLine("Please enter in new details in the following order: Name,Residence and email.\n");
+
+                            Console.WriteLine("Name");
+                            string Name = Console.ReadLine();
+
+                            Console.WriteLine("Address one,two and City");
+                            string Address1 = Console.ReadLine();
+                            string Address2 = Console.ReadLine();
+                            string City = Console.ReadLine();
+
+                            Console.WriteLine("Email:");
+                            string newEmail = Console.ReadLine();
+
+                            Console.WriteLine("Hire Date:");
+                            string newDate = Console.ReadLine();
+                            DateTime UpdatedDate = Convert.ToDateTime(newDate);
+
+
+                            Console.WriteLine("Enter number to chose Designation\n 0 = Clerk \n 1 =Office_Assistance\n 2= Secretary \n 3= Maintainance");
+
+                            Console.WriteLine("Rank");
+                            string DesigS = Console.ReadLine();
+                            int tr = Convert.ToInt32(DesigS);
+
+
+
+                            Console.WriteLine("Salary");
+                            string sall = Console.ReadLine();
+                            Double newSal = Convert.ToDouble(sall);
+
+                          //  designation Deisg = (designation)tr;
+
+
+                            Add<Professor>(prList, new Staff(Name, new Address(Address1, Address2, City), newEmail, newSal, UpdatedDate, Deisg));
+                            Console.WriteLine("New List\n");
+                            showAll<Professor>(prList);
+
+                            break;
+
+
+                        case "3":
+
+                            Console.WriteLine("Enter the name and email of the student youd like to update\n");
+
+                            Console.WriteLine("Name");
+                            string findName = Console.ReadLine();
+                            Console.WriteLine("Email:");
+                            string findEmail = Console.ReadLine();
+
+                            UpdateProf(findName, findEmail, prList);
+                            Console.WriteLine("New List");
+                            showAll<Professor>(prList);
+
+                            break;
+
+
+                        case "4":
+                            showAll<Professor>(prList);
+                            Console.WriteLine("Please enter the number that corrosponds to the students position on the list:(Ascending)\n");
+                            string delChoice = Console.ReadLine();
+                            Convert.ToInt16(delChoice);
+                            Modify.Del<Professor>(prList, Int32.Parse(delChoice));
+
+                            Console.WriteLine("New List");
+                            showAll<Professor>(prList);
+
+
+                            break;
+
+
+                        case "5":
+
+                            break;
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                }
     
     
     
