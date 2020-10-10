@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 namespace AM_A1
 {
     public class Person
@@ -19,14 +21,23 @@ namespace AM_A1
 
         public override string ToString()
         {
-
-            return $"Class: Person | Name = {Name}| Residence = {Residence}| Email ={Email} ";
+            base.ToString();
+            return $"Name = {Name}| Residence = {Residence}| Email ={Email}";
         }
 
 
+        public static void
+            showAll<T>(List<T> GenList)
+        {
+            var Per = from Show in GenList select Show;
 
+            Per.ToList();
+            foreach (T s in Per)
+                Console.WriteLine(s);
 
+        }
 
+     
 
 
 

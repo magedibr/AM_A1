@@ -37,13 +37,6 @@ namespace AM_A1
 
 
 
-        public static String showAll(List<Staff> Showlist) {
-
-            var Per = from Show in Showlist select Show;
-            Per.ToArray();
-            return Per.ToString();
-        
-        }
 
 
 
@@ -58,7 +51,7 @@ namespace AM_A1
 
         public override string ToString()
         {
-            return base.ToString() + $"Class: Staff | Name = {Name}| Residence = {Residence}| Email ={Email} | Hire Date = {HireDate} | Salary = {Salary}| Designation= {Designation}";
+            return base.ToString() + $"Name = {Name}| Residence = {Residence} | Email ={Email} | Hire Date = {HireDate.Date} | Salary = {Salary}| Designation= {Designation}";
         }
     }
 }

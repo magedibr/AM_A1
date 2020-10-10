@@ -19,7 +19,8 @@ namespace AM_A1
 
         public override string ToString()
         {
-            return base.ToString() + $"Class: Student | Name = {Name}| Residence = {Residence}| Email ={Email} ";
+            base.ToString(); 
+            return $"Student | Name = {Name}| Residence = {Residence}| Email ={Email}";
         }
 
         public static void StuFunc()
@@ -32,7 +33,7 @@ namespace AM_A1
                  "Press 4 to delete a student"+
                  "Press 5 to return to main menu"
                 );
-
+/*
             string stChoice = null;
                 
                 
@@ -56,7 +57,7 @@ namespace AM_A1
 
             }
 
-
+*/
 
 
 

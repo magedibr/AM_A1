@@ -52,21 +52,10 @@ namespace AM_A1
 
 
 
-
-
-
-
-
-
-
-
-
-
-
         public override string ToString()
         {
-
-            return base.ToString() + $"Class: Employee | Name = {Name}| Residence = {Residence}| Email ={Email} | Hire Date = {HireDate} | Salary = {Salary}";
+            base.ToString();
+            return $"Name: {Name}| Residence: {Residence}| Email: {Email} | Hire Date: {HireDate.Date} | Salary:{Salary}";
 
         }
     }

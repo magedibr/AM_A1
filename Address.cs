@@ -22,7 +22,7 @@ namespace AM_A1
 
         public override string ToString()
         {
-            return $"Class: Address | Address1 = {Address1} | Address2 = {Address2} | City = {City}";
+            return $"Address1: {Address1} | Address2: {Address2} | City: {City}";
         }
 
 

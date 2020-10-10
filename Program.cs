@@ -32,33 +32,43 @@ namespace AM_A1
 
 
 
-            Console.WriteLine("Welcome, please choose a command:\n"+
-                              "Press 1 to modify Student\n"+
-                              "Press 2 to modify Staff\n"+
-                              "Press 3 to modify Professor\n"+
+
+
+
+            Console.WriteLine("Welcome, please choose a command:\n" +
+                              "Press 1 to modify Student\n" +
+                              "Press 2 to modify Staff\n" +
+                              "Press 3 to modify Professor\n" +
                               "Press 0 to exit");
-            //  Staff.showAll(staffList);
 
- var Per = from Show in staffList select Show;
-            Per.ToArray();
-            Console.WriteLine(s);
+          Staff.showAll<Student>(studList);
 
+          //  Staff L = new Staff("St1", new Address("B1", "B12", "BCt1"), "staf1@eg.com", 3000, new DateTime(2018, 10, 08), Staff.designation.Clerk);
 
 
 
+         //   Console.WriteLine(L);
+            
+            
+            
+           /* 
+           
+            var Per = from Show in staffList select Show;
+
+            Per.ToList();
+            foreach (Staff s in Per)
+                Console.WriteLine(s);
+        
+        */
+       
+        
+        } 
+    } 
 
 
 
-
-
-
-
-
-
-
-
-            string choice = null; 
-
+}
+/*
             while (choice != "0" )
             {
               choice =Console.ReadLine();
@@ -108,4 +118,4 @@ namespace AM_A1
 
         }
     }
-}
+}*/
