@@ -48,10 +48,9 @@ namespace AM_A1
 
                 switch (modifyChoice)
                 {
-                    case "1":
-                        
-
-
+                    case "1":Student.StuFunc(studList);
+                      break;
+                    case "2":
                         break;
 
 
@@ -77,7 +76,7 @@ namespace AM_A1
                 string name = Console.ReadLine();
                 string email = Console.ReadLine();
 
-                Student.Update(name, email, studList);
+                Student.UpdateSt(name, email, studList);
                 Modify.showAll<Student>(studList);
 
 

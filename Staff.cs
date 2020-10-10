@@ -88,10 +88,18 @@ namespace AM_A1
                 staff.HireDate = UpdatedDate.Date;
                 staff.Designation = (designation)tr;
                 staff.Salary = newSal;
+                staff.hours
 
             }
 
         }
+
+
+        
+
+
+
+
 
 
 
@@ -99,5 +107,117 @@ namespace AM_A1
         {
             return base.ToString() + $"Name = {Name}| Residence = {Residence} | Email ={Email} | Hire Date = {HireDate.Date} | Salary = {Salary}| Designation= {Designation}";
         }
+
+
+        public static void StaFunc(List<Staff> stfLi)
+        {
+            Console.WriteLine("Staff Menu\n" +
+                "Press 1 to list all staff\n" +
+                "Press 2 to add a new staff member\n" +
+                "Press 3 to update an existing staff member\n" +
+                "Press 4 to delete a staff member" +
+                "Press 5 to return to main menu"
+               );
+
+            string StuChoice = null;
+
+
+            while (StuChoice != "5")
+            {
+                StuChoice = Console.ReadLine();
+
+                switch (StuChoice)
+                {
+                    case "1":
+                        showAll<Staff>(stfLi);
+                        break;
+
+                    case "2":
+                        Console.WriteLine("Please enter in new details in the following order: Name,Residence and email.\n");
+
+                        Console.WriteLine("Name");
+                        string Name = Console.ReadLine();
+
+                        Console.WriteLine("Address one,two and City");
+                        string Address1 = Console.ReadLine();
+                        string Address2 = Console.ReadLine();
+                        string City = Console.ReadLine();
+
+                        Console.WriteLine("Email:");
+                        string newEmail = Console.ReadLine();
+
+                        Console.WriteLine("Hire Date:");
+                        string newDate = Console.ReadLine();
+                        DateTime UpdatedDate = Convert.ToDateTime(newDate);
+
+                        Console.WriteLine("Hours:");
+                        string stringHours = Console.ReadLine();
+                        int newHours = Convert.ToInt32(stringHours);
+
+                        Console.WriteLine("Enter number to chose Designation\n 0 = Clerk \n 1 =Office_Assistance\n 2= Secretary \n 3= Maintainance");
+
+                        Console.WriteLine("Rank");
+                        string rankk = Console.ReadLine();
+                        int tr = Convert.ToInt32(rankk);
+
+
+                        Console.WriteLine("Salary");
+                        string sall = Console.ReadLine();
+                        Double newSal = Convert.ToDouble(sall);
+
+
+
+
+                        Add<Staff>(stfLi,new Staff(Name,new Address(Address1,Address2,City) );
+                        Console.WriteLine("New List\n");
+                        showAll<Student>(stfLi);
+
+                        break;
+
+
+                    case "3":
+
+                        Console.WriteLine("Enter the name and email of the student youd like to update\n");
+
+                        Console.WriteLine("Name");
+                        string findName = Console.ReadLine();
+                        Console.WriteLine("Email:");
+                        string findEmail = Console.ReadLine();
+
+                        UpdateSt(findName, findEmail, stLi);
+
+                        Console.WriteLine("New List");
+                        showAll<Student>(stLi);
+
+                        break;
+
+
+                    case "4":
+                        showAll<Student>(stLi);
+                        Console.WriteLine("Please enter the number that corrosponds to the students position on the list:(Ascending)\n");
+                        string delChoice = Console.ReadLine();
+                        Convert.ToInt16(delChoice);
+                        Modify.Del<Student>(stLi, Int32.Parse(delChoice));
+
+
+                        Console.WriteLine("New List");
+                        showAll<Student>(stLi);
+
+
+                        break;
+
+
+                    case "5":
+
+                        break;
+                }
+
+
+            }
+        }
+
+
+
+
     }
 }

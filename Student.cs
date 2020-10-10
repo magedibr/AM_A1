@@ -34,11 +34,11 @@ namespace AM_A1
                 "Press 5 to return to main menu"
                );
 
-            string StuChoice = Console.ReadLine();
+            string StuChoice = null;
 
 
             while (StuChoice != "5")
-            {
+            { StuChoice= Console.ReadLine();
 
                 switch (StuChoice)
                 {
@@ -70,10 +70,10 @@ namespace AM_A1
                         Console.WriteLine("Name");
                         string findName = Console.ReadLine();
                         Console.WriteLine("Email:");
-                        
+                        string findEmail = Console.ReadLine();
 
+                        UpdateSt(findName, findEmail, stLi);
 
-                                             //   Update(upName)
                         Console.WriteLine("New List");
                         showAll<Student>(stLi);
 
@@ -84,8 +84,8 @@ namespace AM_A1
                         showAll<Student>(stLi);
                         Console.WriteLine("Please enter the number that corrosponds to the students position on the list:(Ascending)\n");
                         string delChoice=Console.ReadLine();
-                        Convert.ToInt32(delChoice);
-                        
+                        Convert.ToInt16(delChoice);                        
+                        Modify.Del<Student>(stLi,Int32.Parse(delChoice));
                         
                         
                         Console.WriteLine("New List");
@@ -93,19 +93,12 @@ namespace AM_A1
 
 
                         break;
+
+
+                    case "5":
+                        
+                        break;
                 }
-
-
-
-
-
-                
-
-
-
-
-
-
 
 
             }
@@ -113,7 +106,7 @@ namespace AM_A1
 
 
 
-        public static void Update(String name, String email, List<Student> list)
+        public static void UpdateSt(String name, String email, List<Student> list)
         {
 
             var stu = from s in list
@@ -141,19 +134,6 @@ namespace AM_A1
             }
             // Student student = new Student(name, new Address(Address1, Address2, City), email);
             //list.Add(student);
-
-
-            Console.WriteLine("New Student information:");
-
-
-
-
-
-
-
-
-
-
 
 
         }
