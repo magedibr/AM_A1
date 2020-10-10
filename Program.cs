@@ -48,94 +48,21 @@ namespace AM_A1
 
                 switch (modifyChoice)
                 {
-                    case "1":Student.StuFunc(studList);
-                      break;
-                    case "2":Staff.StaFunc(staffList);
-                        break;
-                    case "3":
-
-
-
-
-
-
-                }
-
-
-
-
-
-                //   Student.showAll<Student>(studList);
-                //   Modify.Add(studList, new Student("AAABBB", new Address("heh", "heh", "heh"), "asasd"));
-                Console.WriteLine("Please pick which student you would like to delete(pick what number they are in the list)");
-
-                Modify.showAll<Student>(studList);
-                //Console.WriteLine("Number:");
-                // string num = Console.ReadLine();
-                //   Modify.Del<Student>(studList, int.Parse(num));
-                //  Modify.showAll<Student>(studList);
-                string name = Console.ReadLine();
-                string email = Console.ReadLine();
-
-                Student.UpdateSt(name, email, studList);
-                Modify.showAll<Student>(studList);
-
-
-
-            }
-        }
-
-
-
-    }
-/*
-            while (choice != "0" )
-            {
-              choice =Console.ReadLine();
-                switch (choice)
-                {
-                    case "0":
-                        Console.WriteLine("Exited Programm");
-                        break;
-
                     case "1":
-                        Staff.showAll(staffList);
-                           ;
-                       
+                        Student.StuFunc(studList);
                         break;
-
                     case "2":
+                        Staff.StaFunc(staffList);
                         break;
-
                     case "3":
+                        Professor.ProfFunc(profList);
                         break;
+                    case "0": break;
 
                 }
             }
-
-
-           
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
+
     }
-}*/
+
+    }

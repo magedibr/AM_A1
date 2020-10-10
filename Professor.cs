@@ -11,7 +11,7 @@ namespace AM_A1
         public Professor() { }
 
 
-        public Professor(string name, Address residence, string email, int salary, DateTime hireDate, double hours, Enum rank) : base(salary, hireDate)
+        public Professor(string name, Address residence, string email, double salary, DateTime hireDate, double hours, Enum rank) : base(salary, hireDate)
         {
             this.Name = name;
             this.Residence = residence;
@@ -24,9 +24,9 @@ namespace AM_A1
         }
         public enum rank
         {
-            Associate=0,
-            Proffessor=1,
-            Assis_Prof=2,
+            Associate = 0,
+            Proffessor = 1,
+            Assis_Prof = 2,
         }
 
 
@@ -40,33 +40,33 @@ namespace AM_A1
                         select p;
 
             Console.WriteLine("Please enter in new details in the following order: Name,Residence and email.\n");
-          
+
             Console.WriteLine("Name:");
             string newName = Console.ReadLine();
-            
+
             Console.WriteLine("Address one,two and City");
             string Address1 = Console.ReadLine();
             string Address2 = Console.ReadLine();
             string City = Console.ReadLine();
-            
+
             Console.WriteLine("Email:");
             string newEmail = Console.ReadLine();
-            
+
             Console.WriteLine("Hire Date:");
             string newDate = Console.ReadLine();
             DateTime UpdatedDate = Convert.ToDateTime(newDate);
-            
+
             Console.WriteLine("Hours:");
             string stringHours = Console.ReadLine();
             int newHours = Convert.ToInt32(stringHours);
 
-           
+
 
             Console.WriteLine("Enter number to chose rank\n 0 = Associate \n 1 = Professor \n 2 for Assistant Professor:");
 
             Console.WriteLine("Rank");
             string rankk = Console.ReadLine();
-            int tr=  Convert.ToInt32(rankk);
+            int tr = Convert.ToInt32(rankk);
 
 
             Console.WriteLine("Salary");
@@ -96,10 +96,11 @@ namespace AM_A1
         }
 
 
-        public void ProfFunc(List<Professor> prList) {
+        public static void ProfFunc(List<Professor> prList)
+        {
 
 
-                        {
+            {
                 Console.WriteLine("Professor Menu\n" +
                     "Press 1 to list all Professors\n" +
                     "Press 2 to add a new Professors\n" +
@@ -152,10 +153,13 @@ namespace AM_A1
                             string sall = Console.ReadLine();
                             Double newSal = Convert.ToDouble(sall);
 
-                          //  designation Deisg = (designation)tr;
+                            rank nRank = (rank)tr;
 
 
-                            Add<Professor>(prList, new Staff(Name, new Address(Address1, Address2, City), newEmail, newSal, UpdatedDate, Deisg));
+                            Console.WriteLine("hours");
+                            double newH = Convert.ToDouble(Console.ReadLine());
+
+                            Add<Professor>(prList, new Professor(Name, new Address(Address1, Address2, City), newEmail, newSal, UpdatedDate, newH, nRank));
                             Console.WriteLine("New List\n");
                             showAll<Professor>(prList);
 
@@ -197,41 +201,11 @@ namespace AM_A1
                             break;
                     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+            }
+        }
+    }    
     
     }
 
-}
+

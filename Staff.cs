@@ -95,13 +95,6 @@ namespace AM_A1
         }
 
 
-        
-
-
-
-
-
-
 
         public override string ToString()
         {
