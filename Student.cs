@@ -24,7 +24,7 @@ namespace AM_A1
             return $"Student | Name = {Name}| Residence = {Residence}| Email ={Email}";
         }
 
-        public static void StuFunc(List<Student> sts)
+        public static void StuFunc(List<Student> stLi)
         {
             Console.WriteLine("Student Menu\n" +
                 "Press 1 to list aa students\n" +
@@ -43,23 +43,33 @@ namespace AM_A1
                 switch (StuChoice)
                 {
                     case "1":
-                        showAll<Student>(sts);
+                        showAll<Student>(stLi);
                             break;
                    
                     case "2":
                         Console.WriteLine("Please enter in new details in the following order: Name,Residence and email.\n");
                         Console.WriteLine("Name:");
-                        string newName = Console.ReadLine();
+                        string addName = Console.ReadLine();
                         Console.WriteLine("Address one,two and City");
-                        string Address1 = Console.ReadLine();
-                        string Address2 = Console.ReadLine();
-                        string City = Console.ReadLine();
+                        string addAddress1 = Console.ReadLine();
+                        string addAddress2 = Console.ReadLine();
+                        string addCity = Console.ReadLine();
                         Console.WriteLine("Email:");
-                        string newEmail = Console.ReadLine();
-                        Add<Student>(sts,new Student(newName,new Address(Address1,Address2,City),newEmail));
+                        string addEmail = Console.ReadLine();
+                        Add<Student>(stLi,new Student(addName,new Address(addAddress1,addAddress2,addCity),addEmail));
                         Console.WriteLine("New List\n");
-                        showAll<Student>(sts);
+                        showAll<Student>(stLi);
+                           
                         break;
+
+
+                    case "3":
+                                       
+                Console.WriteLine("Enter the name and email of the student youd like to update\n")
+                Console.WriteLine("Name");
+                     string upName = Console.ReadLine();
+                Console.WriteLine("")
+                
                 }
 
 
