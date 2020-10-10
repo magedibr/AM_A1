@@ -60,13 +60,9 @@ namespace AM_A1
             string stringHours = Console.ReadLine();
             int newHours = Convert.ToInt32(stringHours);
 
-
-
-
-
-
-
-            Plist.ToList();
+            Console.WriteLine("Rank");
+            string rank = Console.ReadLine();
+                           Plist.ToList();
 
             foreach (Professor prof in Plist)
             {
@@ -76,7 +72,8 @@ namespace AM_A1
                 prof.Residence.Address2 = Address2;
                 prof.Residence.City = City;
                 prof.Name = newName;
-                prof.HireDate = UpdatedDate;
+                prof.HireDate = UpdatedDate.Date;
+                prof.Rank = prof.Rank.Equals(;
             }
 
 
