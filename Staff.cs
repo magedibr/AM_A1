@@ -102,7 +102,7 @@ namespace AM_A1
         }
 
 
-        public static void StaFunc(List<Staff> stfLi)
+        public static bool StaFunc(List<Staff> stfLi)
         {
             Console.WriteLine("Staff Menu\n" +
                 "Press 1 to list all staff\n" +
@@ -201,7 +201,7 @@ namespace AM_A1
 
                         break;
                 }
-
+                return true;
 
             }
         }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 using System.Linq;
 
 namespace AM_A1
@@ -10,7 +9,6 @@ namespace AM_A1
         public Student()
         {
         }
-
         public Student(string name, Address residence, string email) : base(name, residence, email)
         {
             this.Name = name;
@@ -24,26 +22,30 @@ namespace AM_A1
             return $"Student | Name = {Name}| Residence = {Residence}| Email ={Email}";
         }
 
-        public static void StuFunc(List<Student> stLi)
+        public static bool StuFunc(List<Student> stLi)
         {
-            Console.WriteLine("Student Menu\n" +
-                "Press 1 to list aa students\n" +
-                "Press 2 to add a new student\n" +
-                "Press 3 to update an existing student\n" +
-                "Press 4 to delete a student" +
-                "Press 5 to return to main menu"
-               );
-
-            string StuChoice = null;
+            string menu = "Student Menu\n" +
+                  "Press 1 to list aa students\n" +
+                  "Press 2 to add a new student\n" +
+                  "Press 3 to update an existing student\n" +
+                  "Press 4 to delete a student\n" +
+                  "Press 5 to return to main menu";
+            Console.WriteLine(menu);
 
 
+
+
+            
+
+
+            string StuChoice = Console.ReadLine();
             while (StuChoice != "5")
-            { StuChoice= Console.ReadLine();
-
+            {
                 switch (StuChoice)
                 {
                     case "1":
                         showAll<Student>(stLi);
+                        Console.WriteLine(menu);
                         break;
 
                     case "2":
@@ -59,6 +61,7 @@ namespace AM_A1
                         Add<Student>(stLi, new Student(addName, new Address(addAddress1, addAddress2, addCity), addEmail));
                         Console.WriteLine("New List\n");
                         showAll<Student>(stLi);
+                        Console.WriteLine(menu);
 
                         break;
 
@@ -76,32 +79,30 @@ namespace AM_A1
 
                         Console.WriteLine("New List");
                         showAll<Student>(stLi);
-
+                        Console.WriteLine(menu);
                         break;
 
 
                     case "4":
                         showAll<Student>(stLi);
                         Console.WriteLine("Please enter the number that corrosponds to the students position on the list:(Ascending)\n");
-                        string delChoice=Console.ReadLine();
-                        Convert.ToInt16(delChoice);                        
-                        Modify.Del<Student>(stLi,Int32.Parse(delChoice));
-                        
-                        
+                        string delChoice = Console.ReadLine();
+                        Convert.ToInt16(delChoice);
+                        Modify.Del<Student>(stLi, Int32.Parse(delChoice));
+
+
                         Console.WriteLine("New List");
                         showAll<Student>(stLi);
-
+                        Console.WriteLine(menu);
 
                         break;
 
+                    case "5": return true;
 
-                    case "5":
-                        
-                        break;
-                }
+                }break;
+            }return true;
 
 
-            }
         }
 
 

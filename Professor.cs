@@ -96,7 +96,7 @@ namespace AM_A1
         }
 
 
-        public static void ProfFunc(List<Professor> prList)
+        public static bool ProfFunc(List<Professor> prList)
         {
 
 
@@ -201,7 +201,7 @@ namespace AM_A1
                             break;
                     }
 
-                }
+                }return true;
             }
         }
     }    
