@@ -34,6 +34,14 @@ namespace AM_A1
         }
 
         public Enum Designation { get; set; }
+        public override string ToString()
+        {
+            base.ToString();
+            return  $"Staff| Name = {Name}| Residence = {Residence} | Email ={Email} | Hire Date = {HireDate.Date} | Salary = {Salary}| Designation= {Designation}\n";
+        }
+
+
+
 
 
         public static void UpdateStaff(String name, String email, List<Staff> list)
@@ -96,11 +104,7 @@ namespace AM_A1
 
 
 
-        public override string ToString()
-        {
-            return base.ToString() + $"Name = {Name}| Residence = {Residence} | Email ={Email} | Hire Date = {HireDate.Date} | Salary = {Salary}| Designation= {Designation}";
-        }
-
+        
 
   public static void Del(String name, String email, List<Staff> list)
         {
@@ -193,7 +197,7 @@ namespace AM_A1
                         string findEmail = Console.ReadLine();
 
                         UpdateStaff(findName, findEmail, stfLi);
-                        Console.WriteLine("\nNew List\n");
+                        Console.WriteLine("New List");
                         Modify.showAll<Staff>(stfLi);
                         Console.WriteLine("\n"+stfMnu);
                         break;

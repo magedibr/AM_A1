@@ -25,7 +25,7 @@ namespace AM_A1
         public override string ToString()
         {
             base.ToString();
-            return $"Name: {Name}| Residence: {Residence}| Email: {Email} | Hire Date: {HireDate.Date} | Salary:{Salary}| Hours: {Hours}| Rank: {Rank} ";
+            return $"Professor | Name: {Name}| Residence: {Residence}| Email: {Email} | Hire Date: {HireDate.Date} | Salary:{Salary}| Hours: {Hours}| Rank: {Rank} \n";
 
         }
         //Enum with values assigned to enable calling specific elements

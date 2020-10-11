@@ -22,6 +22,17 @@ namespace AM_A1
             return $"Student | Name = {Name}| Residence = {Residence}| Email ={Email}";
         }
 
+
+
+
+
+
+
+
+
+
+
+
         public static bool StuFunc(List<Student> stLi)
         {
             string menu = "---------Student Menu---------\n" +
