@@ -24,12 +24,12 @@ namespace AM_A1
 
         public static bool StuFunc(List<Student> stLi)
         {
-            string menu = "Student Menu\n" +
-                  "Press 1 to list aa students\n" +
+            string menu = "---------Student Menu---------\n" +
+                  "Press 1 to list all students\n" +
                   "Press 2 to add a new student\n" +
                   "Press 3 to update an existing student\n" +
                   "Press 4 to delete a student\n" +
-                  "Press 5 to return to main menu";
+                  "Press 5 to return to main menu\n";
             
             string StuChoice = null;
           
@@ -43,11 +43,11 @@ namespace AM_A1
                 {
                     case "1":
                         Modify.showAll<Student>(stLi);
-                        Console.WriteLine(menu);
+                        Console.WriteLine("\n"+menu);
                         break;
 
                     case "2":
-                        Console.WriteLine("Please enter in new details in the following order: Name,Residence and email.\n");
+                        Console.WriteLine("Please enter in new student details:\n");
                         Console.WriteLine("Name:");
                         string addName = Console.ReadLine();
                         Console.WriteLine("Address one,two and City");
@@ -57,9 +57,9 @@ namespace AM_A1
                         Console.WriteLine("Email:");
                         string addEmail = Console.ReadLine();
                         Modify.Add<Student>(stLi, new Student(addName, new Address(addAddress1, addAddress2, addCity), addEmail));
-                        Console.WriteLine("New List\n");
+                        Console.WriteLine("\nNew List\n");
                         Modify.showAll<Student>(stLi);
-                        Console.WriteLine(menu);
+                        Console.WriteLine("\n"+menu);
 
                         break;
                     case "3":
@@ -73,9 +73,9 @@ namespace AM_A1
 
                         UpdateSt(findName, findEmail, stLi);
 
-                        Console.WriteLine("New List");
+                        Console.WriteLine("\nNew List\n");
                         Modify.showAll<Student>(stLi);
-                        Console.WriteLine(menu);
+                        Console.WriteLine("\n"+menu);
                         break;
 
 
@@ -87,9 +87,9 @@ namespace AM_A1
                         Modify.Del<Student>(stLi, Int32.Parse(delChoice));
 
 
-                        Console.WriteLine("New List");
+                        Console.WriteLine("\nNew List\n");
                         Modify.showAll<Student>(stLi);
-                        Console.WriteLine(menu);
+                        Console.WriteLine("\n"+menu);
 
                         break;
 

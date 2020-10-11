@@ -99,7 +99,7 @@ namespace AM_A1
 
 
             {
-                string profMnu = "Professor Menu\n" +
+                string profMnu = "---------Professor Menu---------\n" +
                     "Press 1 to list all Professors\n" +
                     "Press 2 to add a new Professors\n" +
                     "Press 3 to update an existing Professors\n" +

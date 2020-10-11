@@ -104,12 +104,12 @@ namespace AM_A1
 
         public static bool StaFunc(List<Staff> stfLi)
         {
-            string stfMnu = "Staff Menu\n" +
+            string stfMnu = "---------SStaff Menu---------S\n" +
                  "Press 1 to list all staff\n" +
                  "Press 2 to add a new staff member\n" +
                  "Press 3 to update an existing staff member\n" +
                  "Press 4 to delete a staff member\n" +
-                 "Press 5 to return to main menu";
+                 "Press 5 to return to main menu\n";
 
 
             string StuChoice = null;
@@ -123,7 +123,7 @@ namespace AM_A1
                 {
                     case "1":
                         Modify.showAll<Staff>(stfLi);
-                        Console.WriteLine(stfMnu);
+                        Console.WriteLine("\n"+stfMnu);
                         break;
 
                     case "2":
@@ -161,9 +161,9 @@ namespace AM_A1
 
 
                         Modify.Add<Staff>(stfLi, new Staff(Name, new Address(Address1, Address2, City), newEmail, newSal, UpdatedDate, Deisg));
-                        Console.WriteLine("New List\n");
+                        Console.WriteLine("\nNew List\n");
                         Modify.showAll<Staff>(stfLi);
-                        Console.WriteLine(stfMnu);
+                        Console.WriteLine("\n"+stfMnu);
 
                         break;
 
@@ -178,9 +178,9 @@ namespace AM_A1
                         string findEmail = Console.ReadLine();
 
                         UpdateStaff(findName, findEmail, stfLi);
-                        Console.WriteLine("New List");
+                        Console.WriteLine("\nNew List\n");
                         Modify.showAll<Staff>(stfLi);
-                        Console.WriteLine(stfMnu);
+                        Console.WriteLine("\n"+stfMnu);
                         break;
 
 
@@ -192,9 +192,9 @@ namespace AM_A1
                         Modify.Del<Staff>(stfLi, Int32.Parse(delChoice));
 
 
-                        Console.WriteLine("New List");
+                        Console.WriteLine("\nNew List\n");
                         Modify.showAll<Staff>(stfLi);
-                        Console.WriteLine(stfMnu);
+                        Console.WriteLine("\n"+stfMnu);
 
 
                         break;
