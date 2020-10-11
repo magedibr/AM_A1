@@ -27,10 +27,10 @@ namespace AM_A1
 
         public enum designation
         {
-            Clerk=0,
-            Office_Assistance=1,
-            Secretary=2,
-            Maintainance=3
+            Clerk = 0,
+            Office_Assistance = 1,
+            Secretary = 2,
+            Maintainance = 3
         }
 
         public Enum Designation { get; set; }
@@ -39,8 +39,8 @@ namespace AM_A1
         public static void UpdateStaff(String name, String email, List<Staff> list)
         {
             var Stalist = from sta in list
-                        where sta.Name == name && sta.Email == email
-                        select sta;
+                          where sta.Name == name && sta.Email == email
+                          select sta;
 
             Console.WriteLine("Please enter in new details in the following order: Name,Residence and email.\n");
 
@@ -63,7 +63,7 @@ namespace AM_A1
             string stringHours = Console.ReadLine();
             int newHours = Convert.ToInt32(stringHours);
 
-            
+
             Console.WriteLine("Enter number to chose Designation\n 0 = Clerk \n 1 =Office_Assistance\n 2= Secretary \n 3= Maintainance");
 
             Console.WriteLine("Rank");
@@ -77,7 +77,7 @@ namespace AM_A1
 
             Stalist.ToList();
 
-            foreach(Staff staff in Stalist)
+            foreach (Staff staff in Stalist)
             {
 
                 staff.Email = newEmail;
@@ -88,7 +88,7 @@ namespace AM_A1
                 staff.HireDate = UpdatedDate.Date;
                 staff.Designation = (designation)tr;
                 staff.Salary = newSal;
-                
+
 
             }
 
@@ -110,7 +110,7 @@ namespace AM_A1
                  "Press 3 to update an existing staff member\n" +
                  "Press 4 to delete a staff member\n" +
                  "Press 5 to return to main menu";
-               
+
 
             string StuChoice = null;
 
@@ -122,7 +122,7 @@ namespace AM_A1
                 switch (StuChoice)
                 {
                     case "1":
-                     Modify.showAll<Staff>(stfLi);
+                        Modify.showAll<Staff>(stfLi);
                         Console.WriteLine(stfMnu);
                         break;
 
@@ -144,7 +144,7 @@ namespace AM_A1
                         string newDate = Console.ReadLine();
                         DateTime UpdatedDate = Convert.ToDateTime(newDate);
 
-                      
+
                         Console.WriteLine("Enter number to chose Designation\n 0 = Clerk \n 1 =Office_Assistance\n 2= Secretary \n 3= Maintainance");
 
                         Console.WriteLine("Rank");
@@ -185,7 +185,7 @@ namespace AM_A1
 
 
                     case "4":
-                     Modify.showAll<Staff>(stfLi);
+                        Modify.showAll<Staff>(stfLi);
                         Console.WriteLine("Please enter the number that corrosponds to the students position on the list:(Ascending)\n");
                         string delChoice = Console.ReadLine();
                         Convert.ToInt16(delChoice);
@@ -204,8 +204,9 @@ namespace AM_A1
 
                         break;
                 }
-                
-            }return true;
+
+            }
+            return true;
         }
 
 

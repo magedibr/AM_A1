@@ -9,7 +9,8 @@ namespace AM_A1
         {
         }
 
-        public Person(string name, Address residence, string email) {
+        public Person(string name, Address residence, string email)
+        {
             this.Name = name;
             this.Residence = residence;
             this.Email = email;
@@ -26,8 +27,8 @@ namespace AM_A1
         }
 
 
-       
-    
+
+
 
 
 

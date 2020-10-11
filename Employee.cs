@@ -29,27 +29,9 @@ namespace AM_A1
             else Console.WriteLine("Salaray must be between 2k and 8k");
         }
 
-        
-        public  Double Salary { get; set; }
-        public  DateTime HireDate { get; set; }
 
-
-/*
-        public static String showAll(List<Employee> Showlist) {
-
-            var Per = from Show in Showlist select Show;
-            Per.ToArray();
-            return Per.ToString();
-        
-        }*/
-
-
-
-
-
-
-
-
+        public Double Salary { get; set; }
+        public DateTime HireDate { get; set; }
 
 
         public override string ToString()

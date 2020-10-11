@@ -30,17 +30,15 @@ namespace AM_A1
                   "Press 3 to update an existing student\n" +
                   "Press 4 to delete a student\n" +
                   "Press 5 to return to main menu";
+            
+            string StuChoice = null;
+          
+            
             Console.WriteLine(menu);
-
-
-
-
-
-
-
-            string StuChoice = Console.ReadLine();
+          
             while (StuChoice != "5")
             {
+                StuChoice = Console.ReadLine();
                 switch (StuChoice)
                 {
                     case "1":
@@ -64,8 +62,6 @@ namespace AM_A1
                         Console.WriteLine(menu);
 
                         break;
-
-
                     case "3":
 
                         Console.WriteLine("Enter the name and email of the student youd like to update\n");
@@ -97,13 +93,12 @@ namespace AM_A1
 
                         break;
 
-                    case "5": return true;
+                    case "5":
+                        break; 
 
-                }
-                break;
-            }
-            return true;
-
+                }       
+            } 
+            return true;         
 
         }
 
@@ -142,47 +137,7 @@ namespace AM_A1
         }
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
 
 
 

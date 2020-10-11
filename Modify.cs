@@ -33,11 +33,12 @@ namespace AM_A1
 
 
 
-    public static void Del<T>(List<T> GenList, int inp ){
+        public static void Del<T>(List<T> GenList, int inp)
+        {
 
-            GenList.RemoveAt(inp+1);
-        
-        
+            GenList.RemoveAt(inp + 1);
+
+
         }
 
 

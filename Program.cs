@@ -29,14 +29,14 @@ namespace AM_A1
             profList.Add(new Professor("Pr2", new Address("C2", "C22", "Pct2"), "Pr2@eg.com", 7600, new DateTime(2018, 10, 09), "Thus: 3pm - 7pm", Professor.rank.Assis_Prof));
             profList.Add(new Professor("Pr3", new Address("C3", "C32", "Pct3"), "Pr3@eg.com", 6600, new DateTime(2018, 10, 09), "Tue:  5pm - 7pm", Professor.rank.Assis_Prof));
             profList.Add(new Professor("Pr4", new Address("C4", "C42", "Pct4"), "Pr4@eg.com", 8000, new DateTime(2018, 10, 09), "Mon:  1pm-4pm ", Professor.rank.Proffessor));
-                 string menuMsg ="Welcome, please choose a command:\n" +
-                              "Press 1 to modify Student\n" +
-                              "Press 2 to modify Staff\n" +
-                              "Press 3 to modify Professor\n" +
-                              "Press 0 to exit";
+            string menuMsg = "Welcome, please choose a command:\n" +
+                         "Press 1 to modify Student\n" +
+                         "Press 2 to modify Staff\n" +
+                         "Press 3 to modify Professor\n" +
+                         "Press 0 to exit";
             Console.WriteLine(menuMsg);
             string modifyChoice = Console.ReadLine();
-                                    
+
 
             while (modifyChoice != "0")
             {
@@ -44,21 +44,21 @@ namespace AM_A1
                 switch (modifyChoice)
                 {
                     case "1":
-                        if(Student.StuFunc(studList))
+                        if (Student.StuFunc(studList))
                             Console.WriteLine(menuMsg);
                         modifyChoice = Console.ReadLine();
                         break;
 
-                         case "2":
+                    case "2":
                         if (Staff.StaFunc(staffList))
                             Console.WriteLine(menuMsg);
                         modifyChoice = Console.ReadLine();
                         break;
                     case "3":
                         if (Professor.ProfFunc(profList))
-                        Console.WriteLine(menuMsg);
+                            Console.WriteLine(menuMsg);
                         modifyChoice = Console.ReadLine();
-                           
+
                         break;
                     case "0": return;
 
@@ -68,4 +68,4 @@ namespace AM_A1
 
     }
 
-    }
+}

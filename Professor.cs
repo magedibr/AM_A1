@@ -11,14 +11,14 @@ namespace AM_A1
         public Professor() { }
 
 
-        public Professor(string name, Address residence, string email, double salary, DateTime hireDate, string Hours , Enum rank) : base(salary, hireDate)
+        public Professor(string name, Address residence, string email, double salary, DateTime hireDate, string Hours, Enum rank) : base(salary, hireDate)
         {
             this.Name = name;
             this.Residence = residence;
             this.Email = email;
             this.Salary = salary;
             this.HireDate = hireDate;
-            this.Hours = Hours;            
+            this.Hours = Hours;
             this.Rank = rank;
 
         }
@@ -29,7 +29,7 @@ namespace AM_A1
             Assis_Prof = 2,
         }
 
-                public String Hours { get; set; }
+        public String Hours { get; set; }
         public Enum Rank { get; set; }
 
         public static void UpdateProf(String name, String email, List<Professor> list)
@@ -57,7 +57,7 @@ namespace AM_A1
 
             Console.WriteLine("Hours (Day:from-to):");
             string stringHours = Console.ReadLine();
-            
+
 
 
             Console.WriteLine("Enter number to chose rank\n 0 = Associate \n 1 = Professor \n 2 for Assistant Professor:");
@@ -117,7 +117,7 @@ namespace AM_A1
                     switch (StuChoice)
                     {
                         case "1":
-                       Modify.showAll<Professor>(prList);
+                            Modify.showAll<Professor>(prList);
                             break;
 
                         case "2":
@@ -199,11 +199,12 @@ namespace AM_A1
                             break;
                     }
 
-                }return true;
+                }
+                return true;
             }
         }
-    }    
-    
     }
+
+}
 
 
