@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 
 
 //Class used to contain methods to improve readibilty
@@ -40,6 +41,7 @@ namespace AM_A1
             else {
                 Console.WriteLine("Wrong choice please try again");
                 Del<T>(GenList,inp);
+             
             
             
             }
