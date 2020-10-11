@@ -35,7 +35,7 @@ namespace AM_A1
 
 
 
-            
+
 
 
             string StuChoice = Console.ReadLine();
@@ -44,7 +44,7 @@ namespace AM_A1
                 switch (StuChoice)
                 {
                     case "1":
-                        showAll<Student>(stLi);
+                        Modify.showAll<Student>(stLi);
                         Console.WriteLine(menu);
                         break;
 
@@ -58,9 +58,9 @@ namespace AM_A1
                         string addCity = Console.ReadLine();
                         Console.WriteLine("Email:");
                         string addEmail = Console.ReadLine();
-                        Add<Student>(stLi, new Student(addName, new Address(addAddress1, addAddress2, addCity), addEmail));
+                        Modify.Add<Student>(stLi, new Student(addName, new Address(addAddress1, addAddress2, addCity), addEmail));
                         Console.WriteLine("New List\n");
-                        showAll<Student>(stLi);
+                        Modify.showAll<Student>(stLi);
                         Console.WriteLine(menu);
 
                         break;
@@ -78,13 +78,13 @@ namespace AM_A1
                         UpdateSt(findName, findEmail, stLi);
 
                         Console.WriteLine("New List");
-                        showAll<Student>(stLi);
+                        Modify.showAll<Student>(stLi);
                         Console.WriteLine(menu);
                         break;
 
 
                     case "4":
-                        showAll<Student>(stLi);
+                        Modify.showAll<Student>(stLi);
                         Console.WriteLine("Please enter the number that corrosponds to the students position on the list:(Ascending)\n");
                         string delChoice = Console.ReadLine();
                         Convert.ToInt16(delChoice);
@@ -92,15 +92,17 @@ namespace AM_A1
 
 
                         Console.WriteLine("New List");
-                        showAll<Student>(stLi);
+                        Modify.showAll<Student>(stLi);
                         Console.WriteLine(menu);
 
                         break;
 
                     case "5": return true;
 
-                }break;
-            }return true;
+                }
+                break;
+            }
+            return true;
 
 
         }

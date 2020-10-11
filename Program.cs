@@ -25,10 +25,10 @@ namespace AM_A1
 
             List<Professor> profList = new List<Professor>();
 
-            profList.Add(new Professor("Pr1", new Address("C1", "C12", "Pct1"), "Pr1@eg.com", 7800, new DateTime(2018, 10, 09), 3.0, Professor.rank.Associate));
-            profList.Add(new Professor("Pr2", new Address("C2", "C22", "Pct2"), "Pr2@eg.com", 7600, new DateTime(2018, 10, 09), 3.0, Professor.rank.Assis_Prof));
-            profList.Add(new Professor("Pr3", new Address("C3", "C32", "Pct3"), "Pr3@eg.com", 6600, new DateTime(2018, 10, 09), 3.0, Professor.rank.Assis_Prof));
-            profList.Add(new Professor("Pr4", new Address("C4", "C42", "Pct4"), "Pr4@eg.com", 8000, new DateTime(2018, 10, 09), 3.0, Professor.rank.Proffessor));
+            profList.Add(new Professor("Pr1", new Address("C1", "C12", "Pct1"), "Pr1@eg.com", 7800, new DateTime(2018, 10, 09), "Fri:  5pm - 6pm", Professor.rank.Associate));
+            profList.Add(new Professor("Pr2", new Address("C2", "C22", "Pct2"), "Pr2@eg.com", 7600, new DateTime(2018, 10, 09), "Thus: 3pm - 7pm", Professor.rank.Assis_Prof));
+            profList.Add(new Professor("Pr3", new Address("C3", "C32", "Pct3"), "Pr3@eg.com", 6600, new DateTime(2018, 10, 09), "Tue:  5pm - 7pm", Professor.rank.Assis_Prof));
+            profList.Add(new Professor("Pr4", new Address("C4", "C42", "Pct4"), "Pr4@eg.com", 8000, new DateTime(2018, 10, 09), "Mon:  1pm-4pm ", Professor.rank.Proffessor));
                  string menuMsg ="Welcome, please choose a command:\n" +
                               "Press 1 to modify Student\n" +
                               "Press 2 to modify Staff\n" +

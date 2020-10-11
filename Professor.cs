@@ -11,14 +11,14 @@ namespace AM_A1
         public Professor() { }
 
 
-        public Professor(string name, Address residence, string email, double salary, DateTime hireDate, double hours, Enum rank) : base(salary, hireDate)
+        public Professor(string name, Address residence, string email, double salary, DateTime hireDate, string Hours , Enum rank) : base(salary, hireDate)
         {
             this.Name = name;
             this.Residence = residence;
             this.Email = email;
             this.Salary = salary;
             this.HireDate = hireDate;
-            this.Hours = hours;
+            this.Hours = Hours;            
             this.Rank = rank;
 
         }
@@ -29,8 +29,7 @@ namespace AM_A1
             Assis_Prof = 2,
         }
 
-
-        public double Hours { get; set; }
+                public String Hours { get; set; }
         public Enum Rank { get; set; }
 
         public static void UpdateProf(String name, String email, List<Professor> list)
@@ -56,10 +55,9 @@ namespace AM_A1
             string newDate = Console.ReadLine();
             DateTime UpdatedDate = Convert.ToDateTime(newDate);
 
-            Console.WriteLine("Hours:");
+            Console.WriteLine("Hours (Day:from-to):");
             string stringHours = Console.ReadLine();
-            int newHours = Convert.ToInt32(stringHours);
-
+            
 
 
             Console.WriteLine("Enter number to chose rank\n 0 = Associate \n 1 = Professor \n 2 for Assistant Professor:");
@@ -86,7 +84,7 @@ namespace AM_A1
                 prof.HireDate = UpdatedDate.Date;
                 prof.Rank = (rank)tr;
                 prof.Salary = newSal;
-                prof.Hours = newHours;
+                prof.Hours = stringHours;
 
             }
 
@@ -101,14 +99,14 @@ namespace AM_A1
 
 
             {
-                Console.WriteLine("Professor Menu\n" +
+                string profMnu = "Professor Menu\n" +
                     "Press 1 to list all Professors\n" +
                     "Press 2 to add a new Professors\n" +
                     "Press 3 to update an existing Professors\n" +
                     "Press 4 to delete a Professor\n" +
-                    "Press 5 to return to main menu"
-                   );
+                    "Press 5 to return to main menu";
 
+                Console.WriteLine(profMnu);
                 string StuChoice = null;
 
 
@@ -119,7 +117,7 @@ namespace AM_A1
                     switch (StuChoice)
                     {
                         case "1":
-                            showAll<Professor>(prList);
+                       Modify.showAll<Professor>(prList);
                             break;
 
                         case "2":
@@ -136,7 +134,7 @@ namespace AM_A1
                             Console.WriteLine("Email:");
                             string newEmail = Console.ReadLine();
 
-                            Console.WriteLine("Hire Date:");
+                            Console.WriteLine("Hire Date:(MM-DD-YYYY)");
                             string newDate = Console.ReadLine();
                             DateTime UpdatedDate = Convert.ToDateTime(newDate);
 
@@ -156,13 +154,13 @@ namespace AM_A1
                             rank nRank = (rank)tr;
 
 
-                            Console.WriteLine("hours");
-                            double newH = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine(" from:");
+                            string newH = Console.ReadLine();
 
-                            Add<Professor>(prList, new Professor(Name, new Address(Address1, Address2, City), newEmail, newSal, UpdatedDate, newH, nRank));
+                            Modify.Add<Professor>(prList, new Professor(Name, new Address(Address1, Address2, City), newEmail, newSal, UpdatedDate, newH, nRank));
                             Console.WriteLine("New List\n");
-                            showAll<Professor>(prList);
-
+                            Modify.showAll<Professor>(prList);
+                            Console.WriteLine(profMnu);
                             break;
 
 
@@ -177,21 +175,21 @@ namespace AM_A1
 
                             UpdateProf(findName, findEmail, prList);
                             Console.WriteLine("New List");
-                            showAll<Professor>(prList);
-
+                            Modify.showAll<Professor>(prList);
+                            Console.WriteLine(profMnu);
                             break;
 
 
                         case "4":
-                            showAll<Professor>(prList);
+                            Modify.showAll<Professor>(prList);
                             Console.WriteLine("Please enter the number that corrosponds to the students position on the list:(Ascending)\n");
                             string delChoice = Console.ReadLine();
                             Convert.ToInt16(delChoice);
                             Modify.Del<Professor>(prList, Int32.Parse(delChoice));
 
                             Console.WriteLine("New List");
-                            showAll<Professor>(prList);
-
+                            Modify.showAll<Professor>(prList);
+                            Console.WriteLine(profMnu);
 
                             break;
 

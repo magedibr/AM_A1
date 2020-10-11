@@ -104,17 +104,17 @@ namespace AM_A1
 
         public static bool StaFunc(List<Staff> stfLi)
         {
-            Console.WriteLine("Staff Menu\n" +
-                "Press 1 to list all staff\n" +
-                "Press 2 to add a new staff member\n" +
-                "Press 3 to update an existing staff member\n" +
-                "Press 4 to delete a staff member\n" +
-                "Press 5 to return to main menu"
-               );
+            string stfMnu = "Staff Menu\n" +
+                 "Press 1 to list all staff\n" +
+                 "Press 2 to add a new staff member\n" +
+                 "Press 3 to update an existing staff member\n" +
+                 "Press 4 to delete a staff member\n" +
+                 "Press 5 to return to main menu";
+               
 
             string StuChoice = null;
 
-
+            Console.WriteLine(stfMnu);
             while (StuChoice != "5")
             {
                 StuChoice = Console.ReadLine();
@@ -122,7 +122,8 @@ namespace AM_A1
                 switch (StuChoice)
                 {
                     case "1":
-                        showAll<Staff>(stfLi);
+                     Modify.showAll<Staff>(stfLi);
+                        Console.WriteLine(stfMnu);
                         break;
 
                     case "2":
@@ -139,7 +140,7 @@ namespace AM_A1
                         Console.WriteLine("Email:");
                         string newEmail = Console.ReadLine();
 
-                        Console.WriteLine("Hire Date:");
+                        Console.WriteLine("Hire Date:(MM-DD-YYYY)");
                         string newDate = Console.ReadLine();
                         DateTime UpdatedDate = Convert.ToDateTime(newDate);
 
@@ -159,9 +160,10 @@ namespace AM_A1
                         designation Deisg = (designation)tr;
 
 
-                        Add<Staff>(stfLi, new Staff(Name, new Address(Address1, Address2, City), newEmail, newSal, UpdatedDate, Deisg));
+                        Modify.Add<Staff>(stfLi, new Staff(Name, new Address(Address1, Address2, City), newEmail, newSal, UpdatedDate, Deisg));
                         Console.WriteLine("New List\n");
-                        showAll<Staff>(stfLi);
+                        Modify.showAll<Staff>(stfLi);
+                        Console.WriteLine(stfMnu);
 
                         break;
 
@@ -177,13 +179,13 @@ namespace AM_A1
 
                         UpdateStaff(findName, findEmail, stfLi);
                         Console.WriteLine("New List");
-                        showAll<Staff>(stfLi);
-
+                        Modify.showAll<Staff>(stfLi);
+                        Console.WriteLine(stfMnu);
                         break;
 
 
                     case "4":
-                        showAll<Staff>(stfLi);
+                     Modify.showAll<Staff>(stfLi);
                         Console.WriteLine("Please enter the number that corrosponds to the students position on the list:(Ascending)\n");
                         string delChoice = Console.ReadLine();
                         Convert.ToInt16(delChoice);
@@ -191,7 +193,8 @@ namespace AM_A1
 
 
                         Console.WriteLine("New List");
-                        showAll<Staff>(stfLi);
+                        Modify.showAll<Staff>(stfLi);
+                        Console.WriteLine(stfMnu);
 
 
                         break;

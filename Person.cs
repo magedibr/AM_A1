@@ -26,25 +26,7 @@ namespace AM_A1
         }
 
 
-        public static void
-            showAll<T>(List<T> GenList)
-        {
-            var Per = from Show in GenList select Show;
-            Per.ToList();
-            foreach (T s in Per)
-                Console.WriteLine(s);
-        }
-
-        public static void
-           Add<T>(List<T> GenList, T inp)
-        {
-            GenList.Add(inp);
-
-            Console.WriteLine("Updated List:");
-            showAll<T>(GenList);
-        }
-
-
+       
     
 
 
