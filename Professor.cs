@@ -17,18 +17,26 @@ namespace AM_A1
             this.Residence = residence;
             this.Email = email;
             this.Salary = salary;
-            this.HireDate = hireDate;
+            this.HireDate = hireDate.Date;
             this.Hours = Hours;
             this.Rank = rank;
 
         }
+        public override string ToString()
+        {
+            base.ToString();
+            return $"Name: {Name}| Residence: {Residence}| Email: {Email} | Hire Date: {HireDate.Date} | Salary:{Salary}| Hours: {Hours}| Rank: {Rank} ";
+
+        }
+        //Enum with values assigned to enable calling specific elements
         public enum rank
         {
             Associate = 0,
-            Proffessor = 1,
+            Professor = 1,
             Assis_Prof = 2,
         }
-
+        
+        //Auto implemented methods
         public String Hours { get; set; }
         public Enum Rank { get; set; }
 
@@ -48,12 +56,14 @@ namespace AM_A1
 
         public static void UpdateProf(String name, String email, List<Professor> list)
         {
+            //LINQ used to find the chosen Professor
             var Plist = from p in list
                         where p.Name == name && p.Email == email
                         select p;
 
-            Console.WriteLine("Please enter in new details in the following order: Name,Residence and email.\n");
-
+            Console.WriteLine("Please enter in new details : \n");
+           
+            //User input
             Console.WriteLine("Name:");
             string newName = Console.ReadLine();
 
@@ -135,7 +145,7 @@ namespace AM_A1
                             break;
 
                         case "2":
-                            Console.WriteLine("Please enter in new details in the following order: Name,Residence and email.\n");
+                            Console.WriteLine("Please enter in new details: \n");
 
                             Console.WriteLine("Name");
                             string Name = Console.ReadLine();
@@ -153,13 +163,12 @@ namespace AM_A1
                             DateTime UpdatedDate = Convert.ToDateTime(newDate);
 
 
-                            Console.WriteLine("Enter number to chose Designation\n 0 = Clerk \n 1 =Office_Assistance\n 2= Secretary \n 3= Maintainance");
+                            Console.WriteLine("Enter number to chose rank\n 0 = Associate \n 1 = Professor \n 2 for Assistant Professor:") ;
 
                             Console.WriteLine("Rank");
                             string DesigS = Console.ReadLine();
                             int tr = Convert.ToInt32(DesigS);
-
-
+                
 
                             Console.WriteLine("Salary");
                             string sall = Console.ReadLine();
@@ -168,7 +177,7 @@ namespace AM_A1
                             rank nRank = (rank)tr;
 
 
-                            Console.WriteLine(" from:");
+                            Console.WriteLine("Hours (Format: Day: from-to) ");
                             string newH = Console.ReadLine();
 
                             Modify.Add<Professor>(prList, new Professor(Name, new Address(Address1, Address2, City), newEmail, newSal, UpdatedDate, newH, nRank));

@@ -24,10 +24,10 @@ namespace AM_A1
             this.Designation = designation;
         }
 
-
+        //Enum with values assigned to enable calling specific elements
         public enum designation
         {
-            Clerk = 0,
+            Proffessor = 0,
             Office_Assistance = 1,
             Secretary = 2,
             Maintainance = 3
@@ -42,7 +42,7 @@ namespace AM_A1
                           where sta.Name == name && sta.Email == email
                           select sta;
 
-            Console.WriteLine("Please enter in new details in the following order: Name,Residence and email.\n");
+            Console.WriteLine("Please enter in new details :\n");
 
             Console.WriteLine("Name:");
             string newName = Console.ReadLine();
@@ -64,7 +64,7 @@ namespace AM_A1
             int newHours = Convert.ToInt32(stringHours);
 
 
-            Console.WriteLine("Enter number to chose Designation\n 0 = Clerk \n 1 =Office_Assistance\n 2= Secretary \n 3= Maintainance");
+            Console.WriteLine("Enter number to chose Designation\n 0 = Professor \n 1 = Office_Assistance\n 2 = Secretary \n 3 = Maintainance");
 
             Console.WriteLine("Rank");
             string rankk = Console.ReadLine();
@@ -119,7 +119,7 @@ namespace AM_A1
 
         public static bool StaFunc(List<Staff> stfLi)
         {
-            string stfMnu = "---------SStaff Menu---------S\n" +
+            string stfMnu = "---------Staff Menu---------S\n" +
                  "Press 1 to list all staff\n" +
                  "Press 2 to add a new staff member\n" +
                  "Press 3 to update an existing staff member\n" +
