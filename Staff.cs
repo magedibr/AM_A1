@@ -102,6 +102,21 @@ namespace AM_A1
         }
 
 
+  public static void Del(String name, String email, List<Staff> list)
+        {
+            var stu = from Stf in list
+                      where Stf.Name == name && Stf.Email == email
+                      select Stf;
+
+            list.RemoveAll(x => x.Name == name && x.Email == email);
+
+        }
+
+
+
+
+
+
         public static bool StaFunc(List<Staff> stfLi)
         {
             string stfMnu = "---------SStaff Menu---------S\n" +
@@ -186,10 +201,13 @@ namespace AM_A1
 
                     case "4":
                         Modify.showAll<Staff>(stfLi);
-                        Console.WriteLine("Please enter the number that corrosponds to the students position on the list:(Ascending)\n");
-                        string delChoice = Console.ReadLine();
-                        Convert.ToInt16(delChoice);
-                        Modify.Del<Staff>(stfLi, Int32.Parse(delChoice));
+                        Console.WriteLine("Please enter the name and email of the Staff member you'd like to delete\n");
+                        Console.WriteLine("\nName");
+                        string name = Console.ReadLine();
+                        Console.WriteLine("\nEmail");
+                        string email = Console.ReadLine();
+
+                        Del(name, email, stfLi);
 
 
                         Console.WriteLine("\nNew List\n");

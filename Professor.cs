@@ -32,6 +32,20 @@ namespace AM_A1
         public String Hours { get; set; }
         public Enum Rank { get; set; }
 
+
+
+
+        public static void Del(String name, String email, List<Professor> list)
+        {
+            var stu = from Prf in list
+                      where Prf.Name == name && Prf.Email == email
+                      select Prf;
+
+            list.RemoveAll(x => x.Name == name && x.Email == email);
+
+        }
+
+
         public static void UpdateProf(String name, String email, List<Professor> list)
         {
             var Plist = from p in list
@@ -166,7 +180,7 @@ namespace AM_A1
 
                         case "3":
 
-                            Console.WriteLine("Enter the name and email of the student youd like to update\n");
+                            Console.WriteLine("Enter the name and email of the prof youd like to update:\n");
 
                             Console.WriteLine("Name");
                             string findName = Console.ReadLine();
@@ -182,14 +196,17 @@ namespace AM_A1
 
                         case "4":
                             Modify.showAll<Professor>(prList);
-                            Console.WriteLine("Please enter the number that corrosponds to the students position on the list:(Ascending)\n");
-                            string delChoice = Console.ReadLine();
-                            Convert.ToInt16(delChoice);
-                            Modify.Del<Professor>(prList, Int32.Parse(delChoice));
+                            Console.WriteLine("Please entter the name and email of the Prof you'd like to delete:\n");
+                            Console.WriteLine("\nName");
+                            string name = Console.ReadLine();
+                            Console.WriteLine("\nEmail");
+                            string email = Console.ReadLine();
+
+                            Del(name, email, prList);
 
                             Console.WriteLine("New List");
                             Modify.showAll<Professor>(prList);
-                            Console.WriteLine(profMnu);
+                            Console.WriteLine("\n"+profMnu);
 
                             break;
 
