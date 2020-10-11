@@ -201,9 +201,8 @@ namespace AM_A1
 
                         break;
                 }
-                return true;
-
-            }
+                
+            }return true;
         }
 
 

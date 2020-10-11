@@ -56,8 +56,9 @@ namespace AM_A1
                         break;
                     case "3":
                         if (Professor.ProfFunc(profList))
-                            modifyChoice = Console.ReadLine();
                         Console.WriteLine(menuMsg);
+                        modifyChoice = Console.ReadLine();
+                           
                         break;
                     case "0": return;
 
