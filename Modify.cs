@@ -35,9 +35,15 @@ namespace AM_A1
 
         public static void Del<T>(List<T> GenList, int inp)
         {
-
-            GenList.RemoveAt(inp + 1);
-
+            if (inp < GenList.Count)
+                GenList.RemoveAt(inp + 1);
+            else {
+                Console.WriteLine("Wrong choice please try again");
+                Del<T>(GenList,inp);
+            
+            
+            }
+            
 
         }
 
