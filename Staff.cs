@@ -108,7 +108,7 @@ namespace AM_A1
                 "Press 1 to list all staff\n" +
                 "Press 2 to add a new staff member\n" +
                 "Press 3 to update an existing staff member\n" +
-                "Press 4 to delete a staff member" +
+                "Press 4 to delete a staff member\n" +
                 "Press 5 to return to main menu"
                );
 
